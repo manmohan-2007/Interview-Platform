@@ -1,0 +1,44 @@
+@keyframes float-card {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+.landing-root {
+  scroll-behavior: smooth;
+}
+
+.landing-root ::-webkit-scrollbar {
+  width: 10px;
+}
+.landing-root ::-webkit-scrollbar-track {
+  background: #000;
+}
+.landing-root ::-webkit-scrollbar-thumb {
+  background: #241a35;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-root * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
